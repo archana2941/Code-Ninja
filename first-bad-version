@@ -1,6 +1,14 @@
 PROBLEM1:  First Bad Version
 Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
 You are given an API bool isBadVersion(version) which will return whether version is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
+Given n = 6, and version = 4 is the first bad version.
+
+call isBadVersion(3) -> false
+call isBadVersion(6) -> true
+call isBadVersion(4) -> true
+
+Then 4 is the first bad version. 
+
 
 SOLUTION: This is basically a binary search problem.(Hint: how it could be a search problem-?? If one version is bad, following ones are also bad, So we need to search that first bad version, optimal search solution here is binary search.)
 
