@@ -1,0 +1,24 @@
+PROBLEM: Given a binary array, find the maximum number of consecutive 1s in this array.
+Input: [1,1,0,1,1,1]
+Output: 3
+Explanation: The first two digits or the last three digits are consecutive 1s.
+    The maximum number of consecutive 1s is 3.
+    
+SOLUTION: Simply get a count of consecutive 1's and find max count. 
+
+var findMaxConsecutiveOnes = function(nums) {
+    let count = 0;
+    let max = -11111;
+    for(let i=0;i<nums.length;i++) {
+        if(nums[i]===1) {
+            count++
+        }else {
+            max = Math.max(max,count);
+            count = 0;
+        }
+    }
+    if(max<count) {
+        return count;
+    }
+    return max;
+};
